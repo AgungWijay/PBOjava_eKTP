@@ -7,17 +7,20 @@ package edmodo;
 import java.util.Collections;
 /**
  *
- * @author syahr
+ * @author Asus
  */
 public class Person implements Comparable<Person>  {
-     private String NoKtp;
+    private String NIK;
      private String Nama;
-     private String JenisKelamin;
+     private String TTL;
+      private String JenisKelamin;
+      private String Alamat;
+      private String StatusKawin;
+      private String Kewarganegaraan;
+      private String Agama;
+      private String MasaBerlaku;
+      
      private int Age;
-     private String Agama;
-     private String Perkawinan;
-     private String Pekerjaan;
-     private String Kewarganegaraan;
 
     public int getAge() {
         return Age;
@@ -28,21 +31,28 @@ public class Person implements Comparable<Person>  {
     }
 	
        
-	public Person(String nama, int Aage, String JK){
-           setNama(nama);
+	public Person(String NIK ,String nama,String TTL, int Aage, String JK,String Alamat, String StatusKawin,String Kewarganegaraan, String Agama){
+            setNIK(NIK);
+            setNama(nama);
+                setTTL(TTL);
 		setAge(Aage);
                 setJenisKelamin(JK);
+                setAlamat(Alamat);
+                setStatusKawin(StatusKawin);
+                setKewarganegaraan(Kewarganegaraan);
+                setAgama(Agama);
 
 	
 	}
 
-    public String getNoKtp() {
-        return NoKtp;
+        public String getNIK() {
+        return NIK;
     }
 
-    public void setNoKtp(String NoKtp) {
-        this.NoKtp = NoKtp;
+    public void setNIK(String NIK) {
+        this.NIK = NIK;
     }
+   
 
     public String getNama() {
         return Nama;
@@ -50,6 +60,27 @@ public class Person implements Comparable<Person>  {
 
     public void setNama(String Nama) {
         this.Nama = Nama;
+    }
+        public String getTTL() {
+        return Nama;
+    }
+
+    public void setTTL(String TTL) {
+        this.TTL = TTL;
+    }
+      public String getStatusKawin() {
+        return StatusKawin;
+    }
+       public String getAlamat() {
+        return Alamat;
+    }
+
+    public void setAlamat(String Alamat) {
+        this.Alamat = Alamat;
+    }
+
+    public void setStatusKawin(String StatusKawin) {
+        this.StatusKawin = StatusKawin;
     }
 
     public String getJenisKelamin() {
@@ -59,11 +90,31 @@ public class Person implements Comparable<Person>  {
     public void setJenisKelamin(String JenisKelamin) {
         this.JenisKelamin = JenisKelamin;
     }
+     public String getKewarganegaraan() {
+        return Kewarganegaraan;
+    }
+
+    public void setKewarganegaraan(String Kewarganegaraan) {
+        this.Kewarganegaraan = Kewarganegaraan;
+    }
+    public String getAgama() {
+        return Agama;
+    }
+
+    public void setAgama(String Agama) {
+        this.Agama = Agama;
+    }
+    public String getMasaBerlaku(String MasaBerlaku) {
+        return MasaBerlaku;
+    }
+    public void setMasaBerlaku(String MasaBerlaku) {
+        this.MasaBerlaku = MasaBerlaku;
+    }
     
     @Override
     public int compareTo(Person b) {
 		if(Nama.compareTo(b.getNama()) < 0 ) return -1; 
-	      if (NoKtp.compareTo(b.getNoKtp()) == 0) return 0;      
+	      if (NIK.compareTo(b.getNIK()) == 0) return 0;      
 	    return 1; }
 
 }

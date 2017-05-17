@@ -9,8 +9,9 @@ import java.util.Collections;
  *
  * @author Asus
  */
-public class Person implements Comparable<Person>  {
-    private String NIK;
+public class Person //implements Comparable<Person>*
+{
+    private int NIK;
      private String Nama;
      private String TTL;
       private String JenisKelamin;
@@ -31,7 +32,7 @@ public class Person implements Comparable<Person>  {
     }
 	
        
-	public Person(String NIK ,String nama,String TTL, int Aage, String JK,String Alamat, String StatusKawin,String Kewarganegaraan, String Agama){
+	public Person(int NIK ,String nama,String TTL, int Aage, String JK,String Alamat, String StatusKawin,String Kewarganegaraan, String Agama){
             setNIK(NIK);
             setNama(nama);
                 setTTL(TTL);
@@ -45,11 +46,11 @@ public class Person implements Comparable<Person>  {
 	
 	}
 
-        public String getNIK() {
+        public int getNIK() {
         return NIK;
     }
 
-    public void setNIK(String NIK) {
+    public void setNIK(int NIK) {
         this.NIK = NIK;
     }
    
@@ -111,10 +112,10 @@ public class Person implements Comparable<Person>  {
         this.MasaBerlaku = MasaBerlaku;
     }
     
-    @Override
-    public int compareTo(Person b) {
-		if(Nama.compareTo(b.getNama()) < 0 ) return -1; 
-	      if (NIK.compareTo(b.getNIK()) == 0) return 0;      
-	    return 1; }
+   
+//    public int compareTo(Person b) {
+//		if(Nama.compareTo(b.getNama()) < 0 ) return -1; 
+//	      if (NIK.compareTo(b.getNIK()) == 0) return 0;      
+//	    return 1; }
 
 }

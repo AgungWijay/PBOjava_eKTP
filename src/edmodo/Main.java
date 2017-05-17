@@ -29,6 +29,7 @@ import java.util.Map;
             Person anna = new Person("Anna", 23,"P");
             Person aanna = new Person("aAnna", 23,"P");
             Person ajim = new Person("aJim", 25,"L");
+            Person dedi = new Person("Dedi", 21, "L");
 
             //masukkan orang ke RT tertentu------------------------------------------------------------------------------------
             RT1p.put(jim.getNama(), jim);
